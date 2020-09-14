@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/header.js"></script>
+    <script src="javascripts/gerais.js"></script>
+    <script src="javascripts/cadastroAnimalJS.js"></script>
+
+    <title>Buddy - Cadastro de Animal</title>
+</head>
+
+<body>
+<header class="container-fluid topo">
+        <nav class="container nav">
+            <a href="/index.html"><img src="images/logo.png" class="mx-auto my-2 m-md-3 "></a>
+            <div class="row align-items-center ml-2 ">
+
+                <div class="col-12 text-white " id="loginBar">
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav class="navbar-expand-sm corAmarelo">
+        <button class="d-sm-none menuButton fas fa-bars" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação"></button>
+        <span class="d-sm-none h1">Menu</span>
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto container">
+                <li class="nav-item linkMenu my-sm-0 my-2"><a href="/index.html">Pagina Inicial</a> </li>
+                <li class="nav-item linkMenu my-sm-0 my-2"><a href="/lista.html">Animais</a> </li>
+                <li class="nav-item linkMenu my-sm-0 my-2"><a href="/lista.html?urgente=true">Urgência</a> </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <form name="formSignup" class="needs-validation container"  novalidate enctype="multipart/form-data">
+        <h1>Cadastro de Animal</h1>
+        <div class="form-row">
+                <div class="form-group col-md-8">
+                        Nome do Bischinho:
+                        <input type="text" class="form-control" name="nomeAnimal" placeholder="Nome" required>
+                        <div class="invalid-feedback">
+                                Por favor, informe uma cidade válida.
+                              </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        Idade:
+                        <input type="number" class="form-control" name="idadeAnimal" placeholder="Idade em anos" required>
+                    </div>
+                    <div class="form-group col-md-6" id="tipoAnimal">
+      
+                    </div>
+                    <div class="form-group col-md-6">
+                        Raça:
+                        <input type="text" class="form-control" name="racaAnimal" placeholder="Raça do animal">
+                    </div>
+            
+                    <div class="form-group col-md-4">
+                        Sexo:<br>
+                        <select class="custom-select mr-sm-2"name="sexoAnimal">
+                        <option value="estadoInvalido" selected disabled>Selecione o sexo do animal</option>
+                          <option value="M">Macho</option>
+                          <option value="F">Femea</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        Cor:
+                        <input type="text" class="form-control" name="corAnimal">
+                    </div>
+                    <div class="form-group col-md-4">
+                        Situacao:
+                                               <select class="custom-select mr-sm-2"name="situacaoAnimal">
+                        <option value="estadoInvalido" selected disabled>Selecione a situação do animal</option>
+                          <option value="true">Urgente</option>
+                          <option value="false">Não Urgente</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        Descrição
+                            <textarea placeholder="Digite a descrição do animal" class="form-control"  name="descricao" required maxlength="700"></textarea>
+                    </div>
+                    <div class="form-group col-md-12" >
+                        Upload de Foto
+                        <div id="fotosAba">
+                                <input type="file" name="fotos0" class="form-control-file" accept="image/*" >
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="foto();">Carregar foto</button>
+                           
+                        </div>
+                      
+        </div>
+        <button type="button" class="btn btn-success" onclick="cadastraAnimal();">Cadastrar amigo</button>
+    </form>
+
+</body>
+
+</html>
