@@ -1,2 +1,2 @@
 #Arquivos que não serão postados no commit#
-buddy/node_modules/*
+node_modules/*
