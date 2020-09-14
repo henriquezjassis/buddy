@@ -1,2 +1,3 @@
 #Arquivos que não serão postados no commit#
 node_modules/*
+public/imgAnimal/*
